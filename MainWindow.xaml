@@ -11,7 +11,7 @@
         <Button Name="DirectoryButton" Height="30" Width="270" Content="Wybierz lokalizację..." FontStyle="Italic" Margin="236,0,-19,258"  BorderBrush="Black" Background="White" VerticalAlignment="Bottom" Click="ChooseDirectoryClicked"></Button>
         <Grid Height="30" Margin="68,99,68,199">
             <TextBlock VerticalAlignment="Center" Width="200" Text="Ilość konferencji:" Margin="0,4,256,10" ></TextBlock>
-            <TextBox Height="24" Width="130" Text="" Margin="216,0,90,6"></TextBox>
+            <TextBox Height="24" Width="130" Text="" Margin="216,0,90,6" Name="ConferencesAmountBox"></TextBox>
         </Grid>
         <Grid Height="30" Margin="68,129,68,169">
             <TextBlock VerticalAlignment="Center" Width="200" Margin="0,4,256,10" Text="Ostatnie Id konferencji:" ></TextBlock>
