@@ -16,7 +16,13 @@ namespace SqlConferenceManagementSystemGenerator.Models
         public int MaxParticipantNumber { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public decimal BasePrice { get; set; }
+        public double BasePrice { get; set; }
         public string Description { get; set; }
+        public List<WorkshopReservationModel> Reservations { get; set; }
+
+        public WorkshopModel()
+        {
+            Reservations = new List<WorkshopReservationModel>();
+        }
     }
 }

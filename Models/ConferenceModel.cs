@@ -11,11 +11,11 @@ namespace SqlConferenceManagementSystemGenerator.Models
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
         public int ConferenceLength { get; set; }
-        public IEnumerable<ConferenceDayModel> Days { get; set; }
+        public List<ConferenceDayModel> Days { get; set; }
         public AddressModel Address { get; set; }
         public int MaxParticipantsNumber { get; set; }
         public string Description { get; set; }
-        public decimal BasePrice { get; set; }
+        public double BasePrice { get; set; }
         public ConferenceState State { get; set; }
 
         public ConferenceModel()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SqlConferenceManagementSystemGenerator.Consts;
 
 namespace SqlConferenceManagementSystemGenerator.Models
@@ -10,8 +11,9 @@ namespace SqlConferenceManagementSystemGenerator.Models
         public int WorkshopId { get; set; }
         public int NumberOfSeats { get; set; }
         public ReservationState State { get; set; }
-        public decimal TotalPrice { get; set; }
-        public decimal PayedAmount { get; set; }
+        public double TotalPrice { get; set; }
+        public double PayedAmount { get; set; }
         public DateTime CreationDate { get; set; }
+        public List<ParticipantModel> Participants { get; set; }
     }
 }

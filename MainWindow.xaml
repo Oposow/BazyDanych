@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SqlConferenceManagementSystemGenerator"
         mc:Ignorable="d"
-        Title="Sql Generator for Conference Management System" Height="400" Width="600">
-    <Grid Height="370" VerticalAlignment="Top" Margin="0,-50">
-        <TextBlock Text="Lokalizja wygenerowanych plików:" Height="30" Width="200" Margin="31,39,286,251" VerticalAlignment="Bottom"></TextBlock>
-        <Button Name="DirectoryButton" Height="30" Width="270" Content="Wybierz lokalizację..." FontStyle="Italic" Margin="236,0,-19,258"  BorderBrush="Black" Background="White" VerticalAlignment="Bottom" Click="ChooseDirectoryClicked"></Button>
+        Title="Sql Generator for Conference Management System" Height="430" Width="600">
+    <Grid Height="400" VerticalAlignment="Top" Margin="0,-50">
+        <TextBlock Text="Lokalizja wygenerowanych plików:" Height="30" Width="200" Margin="31,19,286,271" VerticalAlignment="Bottom"></TextBlock>
+        <Button Name="DirectoryButton" Height="30" Width="270" Content="Wybierz lokalizację..." FontStyle="Italic" Margin="236,0,-19,278"  BorderBrush="Black" Background="White" VerticalAlignment="Bottom" Click="ChooseDirectoryClicked"></Button>
         <Grid Height="30" Margin="68,99,68,199">
             <TextBlock VerticalAlignment="Center" Width="200" Text="Ilość konferencji:" Margin="0,4,256,10" ></TextBlock>
             <TextBox Height="24" Width="130" Text="" Margin="216,0,90,6" Name="ConferencesAmountBox"></TextBox>
@@ -41,6 +41,15 @@
             <TextBlock VerticalAlignment="Center" Width="200" Margin="0,4,256,10" Text="Ostatnie Id prowadzącego warsztat:" ></TextBlock>
             <TextBox Name="LastWorkshopLeaderBox" Height="24" Width="130" Text="" Margin="216,0,90,6"></TextBox>
         </Grid>
-        <Button Content="Generuj!" Height="30" Width="100" Margin="438,360,34,-30" Click="GenerateQueries"></Button>
+        <Grid Height="30" Margin="68,339,68, -41">
+            <TextBlock VerticalAlignment="Center" Width="200" Margin="0,4,256,10" Text="Data pierwszej konferencji:" ></TextBlock>
+            <DatePicker Name="FirstConferenceDate" Height="24" Width="130" Text="" Margin="216,0,90,6"></DatePicker>
+        </Grid>
+        <Button Content="Generuj!" Height="30" Width="100" Margin="438,390,34,-50" Click="GenerateQueries"></Button>
+        <Grid Name="ProgressBarGrid" Margin="50, 200, 50, 100" Background="LightGray">
+            <Label Name="ProgressBarLabel" Content="Trwa wczytywanie danych..." Margin="100, 20, 100, 50" HorizontalAlignment="Center"></Label>
+            <ProgressBar Name="ProgressBar" Minimum="0" Maximum="100" IsIndeterminate="True"  Margin="100, 50, 100, 20"></ProgressBar>
+        </Grid>
+
     </Grid>
 </Window>
